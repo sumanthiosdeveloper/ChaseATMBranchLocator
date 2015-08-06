@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Mu-if-Oxf">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--ATM/Branch Locator-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ATMBranchLocationsTableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ecp-bS-2Ig">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ATMBranchCell" rowHeight="90" id="BQU-PB-yyj" customClass="ATMBranchLocationCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BQU-PB-yyj" id="lv4-mE-a6A">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;#LocationType#&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sss-F5-2eG" userLabel="LocationType">
+                                                    <rect key="frame" x="8" y="8" width="304" height="20"/>
+                                                    <accessibility key="accessibilityConfiguration" label=""/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" fixedFrame="YES" text="&lt;#Name#&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juD-1U-w6R" userLabel="Name">
+                                                    <rect key="frame" x="8" y="47" width="304" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" fixedFrame="YES" text="&lt;#Address#&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csf-jn-OJc" userLabel="Address">
+                                                    <rect key="frame" x="8" y="65" width="304" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" fixedFrame="YES" text="&lt;#Distance#&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94f-8s-7C1" userLabel="Distance">
+                                                    <rect key="frame" x="8" y="28" width="304" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="csf-jn-OJc" id="7x2-LB-OaY"/>
+                                            <outlet property="distanceLabel" destination="94f-8s-7C1" id="mzI-8d-cpm"/>
+                                            <outlet property="locationLabel" destination="sss-F5-2eG" id="qGm-ns-tsK"/>
+                                            <outlet property="nameLabel" destination="juD-1U-w6R" id="Qae-3c-TEP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pIU-E6-aFF"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SgS-iL-oNc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ecp-bS-2Ig" secondAttribute="trailing" id="3ZP-gA-1gD"/>
+                            <constraint firstItem="Ecp-bS-2Ig" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TAK-Ib-zv1"/>
+                            <constraint firstItem="Ecp-bS-2Ig" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="U2R-QT-xpi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ecp-bS-2Ig" secondAttribute="bottom" id="YVI-Gz-EPW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ATM/Branch Locator" id="3Du-OO-CVY"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ecp-bS-2Ig" id="1My-Qb-uoT"/>
+                        <segue destination="WJe-jJ-eA8" kind="show" identifier="locationDetailsSegue" id="Ktc-np-R60"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869" y="382"/>
+        </scene>
+        <!--Branch Detail View Controller-->
+        <scene sceneID="b7b-p7-ric">
+            <objects>
+                <viewController id="WJe-jJ-eA8" customClass="ATMBranchDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="li7-Ma-Tzk"/>
+                        <viewControllerLayoutGuide type="bottom" id="oWm-VR-THt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="imT-Uv-Omm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0t-JN-OkD">
+                                <rect key="frame" x="8" y="53" width="64" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tj-ap-yko">
+                                <rect key="frame" x="16" y="131" width="49" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2x-9j-Xlf">
+                                <rect key="frame" x="16" y="190" width="67" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATM's" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9D-lW-KA3">
+                                <rect key="frame" x="16" y="239" width="48" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lobby" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aup-5M-wGs">
+                                <rect key="frame" x="16" y="289" width="48" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="500" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Address" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCA-xa-5IQ">
+                                <rect key="frame" x="108" y="27" width="196" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="D4v-VX-yae"/>
+                                    <constraint firstAttribute="width" constant="196" id="PpC-3G-d3g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osv-no-vYx">
+                                <rect key="frame" x="108" y="131" width="196" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhu-2n-zZC">
+                                <rect key="frame" x="108" y="186" width="196" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATM's" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r69-wp-Rvr">
+                                <rect key="frame" x="108" y="235" width="196" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Lobby" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o79-zv-9Jx">
+                                <rect key="frame" x="108" y="286" width="196" height="163"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r69-wp-Rvr" firstAttribute="trailing" secondItem="imT-Uv-Omm" secondAttribute="trailingMargin" id="4S2-BA-IRb"/>
+                            <constraint firstItem="rhu-2n-zZC" firstAttribute="leading" secondItem="osv-no-vYx" secondAttribute="leading" id="9uq-Q9-ay3"/>
+                            <constraint firstItem="VCA-xa-5IQ" firstAttribute="top" secondItem="li7-Ma-Tzk" secondAttribute="bottom" constant="27" id="Aah-bX-OdV"/>
+                            <constraint firstAttribute="trailing" secondItem="VCA-xa-5IQ" secondAttribute="trailing" constant="16" id="Ap3-VC-qRY"/>
+                            <constraint firstItem="r69-wp-Rvr" firstAttribute="top" secondItem="rhu-2n-zZC" secondAttribute="bottom" constant="29" id="CRw-MW-72x"/>
+                            <constraint firstItem="f9D-lW-KA3" firstAttribute="top" secondItem="F2x-9j-Xlf" secondAttribute="bottom" constant="29" id="Hyd-Fg-YgX"/>
+                            <constraint firstItem="F2x-9j-Xlf" firstAttribute="top" secondItem="7Tj-ap-yko" secondAttribute="bottom" constant="35" id="IkP-gt-cWu"/>
+                            <constraint firstItem="Aup-5M-wGs" firstAttribute="leading" secondItem="f9D-lW-KA3" secondAttribute="leading" id="NXt-Z5-Kpg"/>
+                            <constraint firstItem="oWm-VR-THt" firstAttribute="top" secondItem="o79-zv-9Jx" secondAttribute="bottom" constant="55" id="RtE-bh-uQ8"/>
+                            <constraint firstItem="VCA-xa-5IQ" firstAttribute="leading" secondItem="r0t-JN-OkD" secondAttribute="trailing" constant="36" id="Rvh-t7-kvr"/>
+                            <constraint firstItem="o79-zv-9Jx" firstAttribute="trailing" secondItem="imT-Uv-Omm" secondAttribute="trailingMargin" id="T1y-aV-xq0"/>
+                            <constraint firstItem="r0t-JN-OkD" firstAttribute="leading" secondItem="imT-Uv-Omm" secondAttribute="leading" constant="8" id="TgX-yS-GJm"/>
+                            <constraint firstItem="7Tj-ap-yko" firstAttribute="leading" secondItem="r0t-JN-OkD" secondAttribute="leading" constant="8" id="Xyk-SW-gxp"/>
+                            <constraint firstItem="f9D-lW-KA3" firstAttribute="leading" secondItem="F2x-9j-Xlf" secondAttribute="leading" id="Yca-O3-Rwh"/>
+                            <constraint firstItem="7Tj-ap-yko" firstAttribute="top" secondItem="r0t-JN-OkD" secondAttribute="bottom" constant="58" id="dhE-i3-ATw"/>
+                            <constraint firstItem="rhu-2n-zZC" firstAttribute="trailing" secondItem="imT-Uv-Omm" secondAttribute="trailingMargin" id="die-3N-Omh"/>
+                            <constraint firstItem="r0t-JN-OkD" firstAttribute="top" secondItem="li7-Ma-Tzk" secondAttribute="bottom" constant="53" id="lwC-wx-aDO"/>
+                            <constraint firstItem="o79-zv-9Jx" firstAttribute="top" secondItem="r69-wp-Rvr" secondAttribute="bottom" constant="31" id="mAw-rn-Ymc"/>
+                            <constraint firstItem="osv-no-vYx" firstAttribute="top" secondItem="VCA-xa-5IQ" secondAttribute="bottom" constant="31" id="qlW-BM-s6V"/>
+                            <constraint firstItem="VCA-xa-5IQ" firstAttribute="leading" secondItem="osv-no-vYx" secondAttribute="leading" id="r8U-iT-jdY"/>
+                            <constraint firstItem="Aup-5M-wGs" firstAttribute="top" secondItem="f9D-lW-KA3" secondAttribute="bottom" constant="30" id="rHQ-if-hBo"/>
+                            <constraint firstItem="rhu-2n-zZC" firstAttribute="leading" secondItem="r69-wp-Rvr" secondAttribute="leading" id="rUg-cF-3Wt"/>
+                            <constraint firstItem="o79-zv-9Jx" firstAttribute="leading" secondItem="r69-wp-Rvr" secondAttribute="leading" id="xOy-Nw-kUC"/>
+                            <constraint firstItem="oWm-VR-THt" firstAttribute="top" secondItem="Aup-5M-wGs" secondAttribute="bottom" constant="195" id="yDC-f9-mGk"/>
+                            <constraint firstItem="osv-no-vYx" firstAttribute="trailing" secondItem="imT-Uv-Omm" secondAttribute="trailingMargin" id="yRv-Gr-hRq"/>
+                            <constraint firstItem="rhu-2n-zZC" firstAttribute="top" secondItem="osv-no-vYx" secondAttribute="bottom" constant="35" id="zLT-Ln-CgJ"/>
+                            <constraint firstItem="7Tj-ap-yko" firstAttribute="leading" secondItem="F2x-9j-Xlf" secondAttribute="leading" id="zMl-9R-CI3"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="VCA-xa-5IQ" id="KpP-vR-V0B"/>
+                        <outlet property="atmlabel" destination="r69-wp-Rvr" id="8cc-09-RTa"/>
+                        <outlet property="distanceLabel" destination="rhu-2n-zZC" id="fhp-MA-2jH"/>
+                        <outlet property="lobbyLabel" destination="o79-zv-9Jx" id="gHP-Ct-fPT"/>
+                        <outlet property="phoneLabel" destination="osv-no-vYx" id="AzP-rN-NUD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oXW-ND-H03" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1333" y="382"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WC4-yo-nmS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Mu-if-Oxf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="96y-wP-H6v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bEf-4d-ANG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uzn-tl-l1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409" y="382"/>
+        </scene>
+    </scenes>
+</document>
